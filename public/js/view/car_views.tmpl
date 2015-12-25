@@ -1,0 +1,57 @@
+<script type="text/template" id="car_template">
+    	<div>
+    	Make: <%=brandC%> 
+    	</div>
+    	<div>
+			Model: <%=modelC%>
+			</div>
+</script>
+
+
+<script type="text/template" id="car_tr">
+	<td>
+		<span><%=brandC%> </span>
+		<input class='hide' name='brandC' value='<%= brandC %>'>
+	</td>
+	<td>
+		<span><%= modelC %></span>
+		<input class='hide' name='modelC' value='<%= modelC %>'>
+	</td>
+	<td>
+		<span><%= registrationC %></span>
+		<input class='hide' name='registrationC' value='<%= registrationC %>'>
+	</td>
+	<td>
+		<a class="destroy">Delete</a>
+		<a class="edit">Edit</a>
+		<a class='save hide'>Save</a>
+	</td>
+</script>
+
+<script type="text/template" id="car-list">
+    <table id="">
+    	<thead>
+    		<th>Brand</th>
+    		<th>Model</th>
+    		<th>Registration #</th>
+    		<th></th>
+    	</thead>
+    	<tbody>
+    		
+    	</tbody>
+    </table>
+
+    <a href="#" class="newCarBtn">Add New Car</a>
+		<form action="" id="new_car" style="display:none;">
+			Car Brand
+			<input type="text" name="brandC">
+			<br>
+			Car Model
+			<input type="text" name="modelC">
+			<br>
+			Registration #
+			<input type="text" name="registrationC">
+			<br>
+			<a class="save btn btn-primary">Save</a>
+		</form>
+</script>
