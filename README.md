@@ -18,27 +18,19 @@ Now set your server's document root to the `public/` directory.
 
 The end.
 
-## Database Migration and Seeding
-
-The novice script provides a primitive means of migrating and seeding the database.
-Follow the `UserMigration.php` and `UserSeed.php` templates located in `app/database/` for
-your own migrations/seeds.
-
-To migrate and seed your database:
 ```bash
-# Migrate
-php novice migrate
+# create a database name car_wash then load the dump
+mysql -uroot -p car_wash < car_wash.sql
 
-# Seed
-php novice seed
+#in public directory 
+php -S localhost:3001
 
-# Migrate then seed
-php novice migrate --seed
+# try it out in browser
+http://localhost:3001/#/cars
 ```
 
 > __Note:__
-> These just run whatever is in the `run()` function of each seed or migration.
-There's no support for updating or rolling back unless you put it there.
+> Even though loading database form dump isn't a good practice but it just suffice for the purpose of this tutorial. You should use novice migrate if you are collaborating with others.
 
 ## Documentation
 

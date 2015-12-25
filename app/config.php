@@ -12,7 +12,7 @@ $capsule->addConnection(array(
     'host'      => 'localhost',
     'database'  => 'car_wash',
     'username'  => 'root',
-    'password'  => 'mac1234',
+    'password'  => 'your_password',
     'charset'   => 'utf8',
     'collation' => 'utf8_general_ci',
     'prefix'    => ''
