@@ -40,8 +40,12 @@ CarWash.Views.Cars = Backbone.View.extend({
 				brandC: $("#new_car > input[name='brandC']").val(),
 				registrationC: $("#new_car > input[name='registrationC']").val()
 			});
-			car.save();
-			cars.add(car);
+			car.save(null, {
+                success: function(){
+                    console.log("successfully add to db");
+                    cars.add(car);
+                }
+            });
     }
 
 });
