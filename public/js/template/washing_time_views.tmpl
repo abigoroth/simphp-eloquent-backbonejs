@@ -1,0 +1,71 @@
+<script type="text/template" id="wash-list">
+		<a href="#/cars"> Cars </a>
+
+    <table id="">
+    	<thead>
+    		<th>Date</th>
+    		<th>Time</th>
+    		<th>Location</th>
+    		<th>Status</th>
+    		<th>Category</th>
+    		<th></th>
+    	</thead>
+    	<tbody>
+    		
+    	</tbody>
+    </table>
+
+    <a href="#" class="new">Add New Wash</a>
+		<form action="" id="new_wash" style="display:none;">
+			Date
+			<input type="text" name="dateWT">
+			<br>
+			Time
+			<input type="text" name="timeWT">
+			<br>
+			Location
+			<input type="text" name="locationWT">
+			<br>
+			Status
+			<input type="text" name="statusWT">
+			<br>
+			Category
+			<select 
+				id="washing_categories_idWC" 
+				name="washing_categories_idWC"
+				>
+				
+			</select>
+			<br>
+
+			<a class="save btn btn-primary">Save</a>
+		</form>
+</script>
+
+<script type="text/template" id="wash_tr">
+	<td>
+		<span><%=dateWT%> </span>
+		<input class='hide' name='dateWT' value='<%= dateWT %>'>
+	</td>
+	<td>
+		<span><%= timeWT %></span>
+		<input class='hide' name='timeWT' value='<%= timeWT %>'>
+	</td>
+	<td>
+		<span><%= locationWT %></span>
+		<input class='hide' name='locationWT' value='<%= locationWT %>'>
+	</td>
+	<td>
+		<span><%= statusWT %></span>
+		<input class='hide' name='statusWT' value='<%= statusWT %>'>
+	</td>
+	<td>
+		<span><%= washing_categories_idWC %></span>
+		<input class='hide' name='washing_categories_idWC' value='<%= washing_categories_idWC %>'>
+	</td>
+	<td>
+		<a class="destroy">Delete</a>
+		<a class="edit">Edit</a>
+		<a class='save hide'>Save</a>
+	</td>
+</script>
