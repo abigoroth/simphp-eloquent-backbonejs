@@ -1,4 +1,4 @@
-# Slim & Eloquent
+# Slimphp, Eloquent ORM and BackBoneJS
 
 The Slim PHP micro framework paired with Laravel's Illuminate Database toolkit.
 
